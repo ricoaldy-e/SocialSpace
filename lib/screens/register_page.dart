@@ -21,11 +21,10 @@ class _RegisterPageState extends State<RegisterPage> {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Semua data harus diisi.")));
       return;
     }
-    // Loading
     showDialog(context: context, barrierDismissible: false, builder: (c) => Center(child: CircularProgressIndicator()));
     
     var user = await _auth.signUp(_emailController.text, _passController.text, _usernameController.text);
-    Navigator.pop(context); // Tutup loading
+    Navigator.pop(context);
 
     if (user != null) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Register Berhasil! Silakan Login.")));

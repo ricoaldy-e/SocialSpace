@@ -68,7 +68,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 60),
 
-              // --- INPUT ---
               Align(alignment: Alignment.centerLeft, child: Text("Email", style: TextStyle(fontWeight: FontWeight.bold, color: _primaryColor))),
               SizedBox(height: 8),
               TextField(
@@ -94,7 +93,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 40),
 
-              // --- TOMBOL ---
               ElevatedButton(
                 onPressed: _login,
                 child: Text("Masuk", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),

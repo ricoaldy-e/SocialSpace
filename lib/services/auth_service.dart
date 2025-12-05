@@ -37,7 +37,6 @@ class AuthService {
     }
   }
 
-  // Logout
   Future<void> signOut() async {
     await _auth.signOut();
   }
